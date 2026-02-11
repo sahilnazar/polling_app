@@ -1,12 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  html {
-    @apply bg-background text-text-primary antialiased;
-  }
-  body {
-    @apply min-h-screen;
-  }
+@theme {
+  --color-background: #09090b;
+  --color-accent: #8b5cf6;
+  --color-text-primary: #f4f4f5;
+}
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
 }

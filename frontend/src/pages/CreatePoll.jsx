@@ -44,9 +44,9 @@ export default function CreatePoll() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-text-primary p-6">
+    <div className="min-h-screen bg-zinc-950 text-zinc-100 p-6">
       <div className="max-w-xl mx-auto">
-        <h1 className="text-2xl font-bold mb-6 text-accent">Create a poll</h1>
+        <h1 className="text-2xl font-bold mb-6 text-violet-500">Create a poll</h1>
         <form onSubmit={handleSubmit} className="space-y-6 rounded-xl border border-zinc-800 p-6 bg-zinc-900/30">
           {error && (
             <p className="text-red-400 text-sm rounded-lg bg-red-500/10 border border-red-500/30 px-4 py-2">
@@ -60,7 +60,7 @@ export default function CreatePoll() {
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="What would you like to ask?"
-              className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-text-primary placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+              className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -69,7 +69,7 @@ export default function CreatePoll() {
               <button
                 type="button"
                 onClick={addOption}
-                className="text-sm text-accent hover:underline"
+                className="text-sm text-violet-500 hover:underline"
               >
                 + Add option
               </button>
@@ -82,7 +82,7 @@ export default function CreatePoll() {
                     value={opt}
                     onChange={(e) => setOption(i, e.target.value)}
                     placeholder={`Option ${i + 1}`}
-                    className="flex-1 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-700 text-text-primary placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"
+                    className="flex-1 px-4 py-2 rounded-xl bg-zinc-900 border border-zinc-700 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
                   />
                   <button
                     type="button"
@@ -99,7 +99,7 @@ export default function CreatePoll() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full py-3 rounded-xl bg-accent text-white font-medium hover:opacity-90 disabled:opacity-60 transition"
+            className="w-full py-3 rounded-xl bg-violet-500 text-white font-medium hover:opacity-90 disabled:opacity-60 transition"
           >
             {loading ? 'Creating…' : 'Create poll'}
           </button>
